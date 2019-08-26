@@ -173,11 +173,17 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  top: 0%;
+  z-index: 2;
+  background: rgba(140, 140, 255, 0.7);
   height: 80px;
 }
 header h1 {
   font-family: "Lobster", cursive;
+  margin-left: 20px;
+  color: whitesmoke;
 }
 .home-nav {
   font-size: 1.2rem;
@@ -194,33 +200,57 @@ header h1 {
   color: white;
   margin: 10px;
 }
-body {
-  background-image: url(/img/architecture-beautiful-castle-2599692.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-}
 section {
-  height: 130vh;
-  background-color: white;
-  border: 2px solid red;
+  height: 200vh;
+  color: #8c8cff;
 }
 .top-section {
   background-image: url(/img/architecture-beautiful-castle-2599692.jpg);
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
+  position: absolute;
+  top: -80px;
+  /* end of sign up */
+  /* end of product intro */
 }
-.sign-up {
-  border: 2px solid greenyellow;
-  height: 10%;
+.top-section .sign-up {
+  height: 25%;
   width: 25%;
-  margin: 20px auto;
+  margin: 0 auto;
+  margin-top: 20%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-around;
 }
-.intro {
-  height: 50%;
+.top-section .sign-up h2 {
+  color: whitesmoke;
+}
+.top-section .sign-up i {
+  font-size: 100px;
+  color: #8c8cff;
+}
+.top-section .sign-up .sign-up-btn {
+  display: block;
+  background-color: #8c8cff;
+  cursor: pointer;
+  width: 200px;
+  height: 45px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 20px;
+  margin: 30px auto;
+}
+.top-section .sign-up .sign-up-btn:hover {
+  background-color: white;
+  color: #8c8cff;
+}
+.top-section .intro {
   position: relative;
-  top: 40%;
   background: rgba(255, 255, 255, 0.9);
   border: 2px solid black;
   padding: 20px;
@@ -229,26 +259,26 @@ section {
   justify-content: space-around;
   align-items: center;
 }
-.intro .features {
+.top-section .intro .features {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
-.intro .features h3 {
+.top-section .intro .features h3 {
   font-size: 2rem;
   margin: 10px;
 }
-.intro .features i {
+.top-section .intro .features i {
   font-size: 40px;
 }
-.intro .features div {
+.top-section .intro .features div {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.intro .features div div {
+.top-section .intro .features div div {
   display: flex;
   flex-direction: column;
   justify-content: space-around;

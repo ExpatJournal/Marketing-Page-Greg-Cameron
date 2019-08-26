@@ -1,13 +1,7 @@
-body {
-  background-image: url(/img/architecture-beautiful-castle-2599692.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-}
-
 section {
-  height: 130vh;
-  background-color: white;
-  border: 2px solid red;
+  height: 200vh;
+
+  color: @main-color;
 }
 
 .top-section {
@@ -15,43 +9,56 @@ section {
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
-}
-
-.sign-up {
-  border: 2px solid greenyellow;
-  height: 10%;
-  width: 25%;
-  margin: 20px auto;
-  text-align: center;
-}
-
-.intro {
-  height: 50%;
-  position: relative;
-  top: 40%;
-  background: rgba(255, 255, 255, 0.9);
-  border: 2px solid black;
-  padding: 20px;
-  .custom-flex(row, space-around, center);
-
-  .features {
-    .custom-flex(column, space-between, center);
-    h3 {
-      font-size: 2rem;
-      margin: 10px;
+  position: absolute;
+  top: -80px;
+  .sign-up {
+    // border: 2px solid greenyellow;
+    height: 25%;
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 20%;
+    text-align: center;
+    h2 {
+      color: whitesmoke;
     }
-
+    .custom-flex(column, center, space-around);
     i {
-      font-size: 40px;
+      font-size: 100px;
+      color: @main-color;
     }
+    .sign-up-btn {
+      .custom-btn(@main-color, 200px, white);
+      margin: 30px auto;
+    }
+  } /* end of sign up */
+  .intro {
+    // height: 40%;
+    position: relative;
 
-    div {
-      .custom-flex(row, center, center);
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid black;
+    padding: 20px;
+    .custom-flex(row, space-around, center);
+
+    .features {
+      .custom-flex(column, space-between, center);
+      h3 {
+        font-size: 2rem;
+        margin: 10px;
+      }
+
+      i {
+        font-size: 40px;
+      }
 
       div {
-        .custom-flex(column, space-around, center);
-        margin: 20px;
+        .custom-flex(row, center, center);
+
+        div {
+          .custom-flex(column, space-around, center);
+          margin: 20px;
+        }
       }
     }
-  }
+  } /* end of product intro */
 }

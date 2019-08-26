@@ -1,9 +1,15 @@
 header {
   .custom-flex(row, space-between, center);
-  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  top: 0%;
+  z-index: 2;
+  background: rgba(140, 140, 255, 0.7);
   height: 80px;
   h1 {
     font-family: @lobster;
+    margin-left: 20px;
+    color: whitesmoke;
   }
 }
 
@@ -14,12 +20,11 @@ header {
   margin: 10px;
   // background: blue;
   width: 20%;
-}
+  a {
+    text-decoration: none;
+    font-family: @mukta;
 
-.home-nav a {
-  text-decoration: none;
-  font-family: @mukta;
-
-  color: white;
-  margin: 10px;
+    color: white;
+    margin: 10px;
+  }
 }
