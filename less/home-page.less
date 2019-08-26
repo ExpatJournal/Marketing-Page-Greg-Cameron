@@ -1,0 +1,57 @@
+body {
+  background-image: url(/img/architecture-beautiful-castle-2599692.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+section {
+  height: 130vh;
+  background-color: white;
+  border: 2px solid red;
+}
+
+.top-section {
+  background-image: url(/img/architecture-beautiful-castle-2599692.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+.sign-up {
+  border: 2px solid greenyellow;
+  height: 10%;
+  width: 25%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.intro {
+  height: 50%;
+  position: relative;
+  top: 40%;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid black;
+  padding: 20px;
+  .custom-flex(row, space-around, center);
+
+  .features {
+    .custom-flex(column, space-between, center);
+    h3 {
+      font-size: 2rem;
+      margin: 10px;
+    }
+
+    i {
+      font-size: 40px;
+    }
+
+    div {
+      .custom-flex(row, center, center);
+
+      div {
+        .custom-flex(column, space-around, center);
+        margin: 20px;
+      }
+    }
+  }
+}
