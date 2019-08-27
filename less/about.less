@@ -1,6 +1,5 @@
 .about-section {
   height: fit-content;
-  border: 3px solid turquoise;
 }
 
 .container {
@@ -12,8 +11,10 @@
     border-radius: 50%;
   }
   .custom-flex(row, space-evenly, center);
+  @media @sPhone {
+    .custom-flex(column, center, center);
+  }
 }
-
 .person {
   //border: 2px solid red;
   padding: 20px;
@@ -25,5 +26,8 @@
   }
   h2 {
     font-size: 2.8rem;
+  }
+  @media @sPhone {
+    width: 100%;
   }
 }

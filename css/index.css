@@ -273,6 +273,11 @@ footer nav a {
   text-decoration: none;
   margin: 0 20px;
 }
+@media (max-width: 570px) {
+  footer nav {
+    width: 100%;
+  }
+}
 .wrapper {
   margin-right: auto;
   /* 1 */
@@ -280,13 +285,14 @@ footer nav a {
   /* 1 */
   max-width: 960px;
   /* 2 */
+  height: fit-content;
   padding-right: 10px;
   /* 3 */
   padding-left: 10px;
   /* 3 */
 }
 section {
-  height: 150vh;
+  height: fit-content;
   color: #389738;
   width: 100%;
   display: block;
@@ -298,12 +304,7 @@ section {
 }
 .top-section {
   position: relative;
-  background-image: url(/img/architecture-beautiful-castle-2599692_original.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
   width: 100%;
-  border: 2px solid greenyellow;
   /* end of sign up */
   /* !!!!!! INTRO SECTION !!!!!!!!! */
   /* end of product intro */
@@ -311,31 +312,29 @@ section {
 @media (max-width: 960px) {
   .top-section {
     background-size: cover;
-    background-position-x: -300px;
   }
 }
 @media (max-width: 875px) {
   .top-section {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: 200px;
-    background-position-x: -600px;
     height: 170vh;
   }
 }
 @media (max-width: 570px) {
   .top-section {
     height: 200vh;
-    background-position-x: -300px;
   }
 }
 .top-section .sign-up {
   position: relative;
-  height: 50vh;
+  height: 600px;
   width: 100%;
   margin: 0 auto;
-  margin-top: 5%;
   text-align: center;
+  background-image: url(/img/architecture-beautiful-castle-2599692.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -415,7 +414,6 @@ section {
   }
 }
 .top-section .intro #australia {
-  width: 30%;
   margin: 20px;
   position: relative;
   margin-top: 5vh;
@@ -480,7 +478,6 @@ section {
 /* ======== END OF TOP SECTION ======== */
 .about-section {
   height: fit-content;
-  border: 3px solid turquoise;
 }
 .container {
   height: fit-content;
@@ -494,6 +491,14 @@ section {
   height: 150px;
   border-radius: 50%;
 }
+@media (max-width: 570px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .person {
   padding: 20px;
   width: 30%;
@@ -505,4 +510,9 @@ section {
 }
 .person h2 {
   font-size: 2.8rem;
+}
+@media (max-width: 570px) {
+  .person {
+    width: 100%;
+  }
 }

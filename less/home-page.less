@@ -3,13 +3,13 @@
   margin-left: auto; /* 1 */
 
   max-width: 960px; /* 2 */
-
+  height: fit-content;
   padding-right: 10px; /* 3 */
   padding-left: 10px; /* 3 */
 }
 
 section {
-  height: 150vh;
+  height: fit-content;
   color: @main-color;
   width: 100%;
   display: block;
@@ -20,27 +20,20 @@ section {
 
 .top-section {
   position: relative;
-  background-image: url(/img/architecture-beautiful-castle-2599692_original.jpg);
-
-  background-size: cover;
-
-  background-attachment: fixed;
-  background-repeat: no-repeat;
 
   width: 100%;
-  border: 2px solid greenyellow;
   @media @tablet {
     // top: 200px;
     background-size: cover;
-    background-position-x: -300px;
+    //background-position-x: -300px;
   }
   @media @phone {
     // background-position-x: -300px;
-    background-size: cover;
-    background-repeat: no-repeat;
+    //background-size: cover;
+    //background-repeat: no-repeat;
     // margin-top: 270px;
-    background-position-y: 200px;
-    background-position-x: -600px;
+    //background-position-y: 150px;
+    // background-position-x: -600px;
 
     height: 170vh;
     // margin-top: 200px;
@@ -48,18 +41,19 @@ section {
 
   @media @sPhone {
     height: 200vh;
-    background-position-x: -300px;
+    //background-position-x: -300px;
   }
   .sign-up {
     position: relative;
-    //border: 2px solid pink;
-
-    height: 50vh;
+    height: 600px;
     width: 100%;
     margin: 0 auto;
-    margin-top: 5%;
     text-align: center;
-
+    background-image: url(/img/architecture-beautiful-castle-2599692.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     h2 {
       color: whitesmoke;
       font-weight: bolder;
@@ -111,7 +105,7 @@ section {
     }
     //intro picture
     #australia {
-      width: 30%;
+      // width: 30%;
       margin: 20px;
       position: relative;
       margin-top: 5vh;
