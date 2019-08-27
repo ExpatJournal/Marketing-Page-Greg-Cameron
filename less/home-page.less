@@ -1,6 +1,14 @@
 section {
   height: 200vh;
   color: @main-color;
+  width: 100%;
+  @media @tablet {
+    height: 250vh;
+  }
+
+  @media @phone {
+    height: 400vh;
+  }
 }
 
 .top-section {
@@ -10,15 +18,35 @@ section {
   width: 100%;
   position: absolute;
   top: -80px;
+  @media @phone {
+    background-position-x: -300px;
+    background-repeat: no-repeat;
+  }
   .sign-up {
-    // border: 2px solid greenyellow;
+    position: relative;
+
+    @media @tablet {
+      width: 50%;
+      margin-top: 20%;
+      height: 20%;
+    }
+    @media @phone {
+      margin-top: 30%;
+      width: 100%;
+      height: 10%;
+    }
+    @media @sPhone {
+      margin-top: 50%;
+    }
     height: 25%;
     width: 25%;
     margin: 0 auto;
-    margin-top: 20%;
+    margin-top: 15%;
     text-align: center;
     h2 {
       color: whitesmoke;
+      font-weight: bolder;
+      font-size: 4rem;
     }
     .custom-flex(column, center, space-around);
     i {
@@ -28,30 +56,58 @@ section {
     .sign-up-btn {
       .custom-btn(@main-color, 200px, white);
       margin: 30px auto;
+      font-weight: bolder;
     }
   } /* end of sign up */
   .intro {
     // height: 40%;
     position: relative;
-
+    margin: 5% auto;
     background: rgba(255, 255, 255, 0.9);
     border: 2px solid black;
-    padding: 20px;
     .custom-flex(row, space-around, center);
+    @media @tablet {
+      .custom-flex(column, center, center);
+    }
 
+    #australia {
+      margin-left: 20px;
+      width: 30%;
+      @media @tablet {
+        margin: 20px;
+        width: 50%;
+        height: 30vh;
+      }
+      @media @phone {
+        width: 75%;
+      }
+      @media @sPhone {
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
     .features {
       .custom-flex(column, space-between, center);
-      h3 {
+
+      h2 {
+        margin: 10px auto;
+      }
+
+      div div h3 {
         font-size: 2rem;
         margin: 10px;
       }
 
       i {
         font-size: 40px;
+        margin: 10px;
       }
 
       div {
         .custom-flex(row, center, center);
+        @media @phone {
+          .custom-flex(column, center, center);
+        }
 
         div {
           .custom-flex(column, space-around, center);
