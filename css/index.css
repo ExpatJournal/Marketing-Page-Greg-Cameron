@@ -177,7 +177,7 @@ header {
   position: fixed;
   width: 100%;
   z-index: 2;
-  background: rgba(140, 140, 255, 0.7);
+  background: rgba(56, 151, 56, 0.7);
   height: 80px;
 }
 @media (max-width: 875px) {
@@ -199,7 +199,7 @@ header h1 {
   header h1 {
     font-size: 2.8rem;
     margin-top: 10px;
-    color: #8c8cff;
+    color: #389738;
   }
 }
 header .home-nav {
@@ -249,7 +249,7 @@ header .home-nav a {
 }
 section {
   height: 150vh;
-  color: #8c8cff;
+  color: #389738;
   width: 100%;
 }
 @media (max-width: 875px) {
@@ -324,7 +324,7 @@ section {
 }
 .top-section .sign-up .sign-up-btn {
   display: block;
-  background-color: #8c8cff;
+  background-color: #389738;
   cursor: pointer;
   width: 200px;
   height: 45px;
@@ -338,7 +338,7 @@ section {
 }
 .top-section .sign-up .sign-up-btn:hover {
   background-color: white;
-  color: #8c8cff;
+  color: #389738;
 }
 .top-section .intro {
   position: relative;
@@ -410,7 +410,7 @@ section {
   margin: 10px;
   text-decoration: none;
   text-align: center;
-  color: #8c8cff;
+  color: #389738;
 }
 .top-section .intro .features div {
   display: flex;
