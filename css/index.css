@@ -264,9 +264,12 @@ section {
   background-attachment: fixed;
   width: 100%;
   position: absolute;
+  border: 2px solid greenyellow;
   /* end of sign up */
   /* !!!!!! INTRO SECTION !!!!!!!!! */
   /* end of product intro */
+}
+@media (max-width: 900px) {
 }
 @media (max-width: 875px) {
   .top-section {
@@ -274,7 +277,7 @@ section {
     background-repeat: no-repeat;
     top: 270px;
     background-position-y: 200px;
-    height: 150vh;
+    height: 170vh;
   }
 }
 @media (max-width: 570px) {
@@ -288,7 +291,7 @@ section {
   height: 50vh;
   width: 25%;
   margin: 0 auto;
-  margin-top: 10%;
+  margin-top: 5%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -305,12 +308,14 @@ section {
     width: 50%;
     margin: 0 auto;
     height: 20%;
+    top: 120px;
   }
 }
 @media (max-width: 875px) {
   .top-section .sign-up {
     width: 100%;
     height: 30%;
+    top: 0px;
   }
 }
 .top-section .sign-up i {
@@ -352,18 +357,25 @@ section {
     justify-content: flex-start;
     align-items: center;
     height: 40%;
+    top: 140px;
   }
 }
 @media (max-width: 875px) {
   .top-section .intro {
-    height: 70%;
+    height: 60%;
+    top: 50px;
   }
 }
 @media (max-width: 570px) {
+  .top-section .intro {
+    height: 65%;
+  }
 }
 .top-section .intro #australia {
   width: 30%;
   margin: 20px;
+  position: relative;
+  margin-top: 5vh;
 }
 @media (max-width: 900px) {
   .top-section .intro #australia {
@@ -372,7 +384,7 @@ section {
 }
 @media (max-width: 875px) {
   .top-section .intro #australia {
-    width: 75%;
+    display: none;
   }
 }
 @media (max-width: 570px) {
@@ -387,9 +399,7 @@ section {
   justify-content: space-between;
   align-items: center;
   position: relative;
-}
-.top-section .intro .features h2 {
-  margin: 20px auto;
+  margin-top: 5vh;
 }
 .top-section .intro .features div div h3 {
   font-size: 2.3rem;
