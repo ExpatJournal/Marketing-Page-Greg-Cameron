@@ -1,6 +1,8 @@
 header {
   .custom-flex(row, space-between, center);
-  position: fixed;
+  // display: block;
+  position: sticky;
+  top: 0;
   width: 100%;
   z-index: 2;
   background: rgba(56, 151, 56, 0.7);
@@ -26,8 +28,9 @@ header {
 
   .home-nav {
     font-size: 1.7rem;
-    width: 50%;
-    //background: blue;
+    // width: 50%;
+    display: inline-block;
+    // background: blue;
     text-align: right;
     @media @phone {
       .custom-flex(column, center, center);

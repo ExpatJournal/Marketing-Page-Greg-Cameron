@@ -1,3 +1,13 @@
+.wrapper {
+  margin-right: auto; /* 1 */
+  margin-left: auto; /* 1 */
+
+  max-width: 960px; /* 2 */
+
+  padding-right: 10px; /* 3 */
+  padding-left: 10px; /* 3 */
+}
+
 section {
   height: 150vh;
   color: @main-color;
@@ -10,21 +20,27 @@ section {
 
 .top-section {
   position: relative;
-  background-image: url(/img/architecture-beautiful-castle-2599692.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  width: 100%;
+  background-image: url(/img/architecture-beautiful-castle-2599692_original.jpg);
 
+  background-size: cover;
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
+  width: 100%;
   border: 2px solid greenyellow;
   @media @tablet {
     // top: 200px;
+    background-size: cover;
+    background-position-x: -300px;
   }
   @media @phone {
     // background-position-x: -300px;
     background-size: cover;
     background-repeat: no-repeat;
-    margin-top: 270px;
+    // margin-top: 270px;
     background-position-y: 200px;
+    background-position-x: -600px;
 
     height: 170vh;
     // margin-top: 200px;
@@ -37,8 +53,9 @@ section {
   .sign-up {
     position: relative;
     //border: 2px solid pink;
+
     height: 50vh;
-    width: 25%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 5%;
     text-align: center;
@@ -79,7 +96,7 @@ section {
     background: rgba(255, 255, 255, 0.9);
     border: 2px solid black;
 
-    .custom-flex(row, space-around, flex-start);
+    .custom-flex(column, flex-start, center);
     @media @tablet {
       .custom-flex(column, flex-start, center);
       height: 40%;
@@ -98,9 +115,10 @@ section {
       margin: 20px;
       position: relative;
       margin-top: 5vh;
-      // align-self: center;
+      align-self: center;
       @media @tablet {
-        display: none;
+        //display: none;
+        align-self: center;
       }
 
       @media @phone {
