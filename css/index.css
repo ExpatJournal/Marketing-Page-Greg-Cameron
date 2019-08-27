@@ -299,7 +299,7 @@ section {
 }
 @media (max-width: 875px) {
   section {
-    height: 400vh;
+    height: fit-content;
   }
 }
 .top-section {
@@ -316,12 +316,12 @@ section {
 }
 @media (max-width: 875px) {
   .top-section {
-    height: 170vh;
+    height: fit-content;
   }
 }
 @media (max-width: 570px) {
   .top-section {
-    height: 200vh;
+    height: fit-content;
   }
 }
 .top-section .sign-up {
@@ -344,21 +344,6 @@ section {
   color: whitesmoke;
   font-weight: bolder;
   font-size: 4rem;
-}
-@media (max-width: 960px) {
-  .top-section .sign-up {
-    width: 50%;
-    margin: 0 auto;
-    height: 20%;
-    top: 120px;
-  }
-}
-@media (max-width: 875px) {
-  .top-section .sign-up {
-    width: 100%;
-    height: 30%;
-    top: 0px;
-  }
 }
 .top-section .sign-up i {
   font-size: 100px;
@@ -384,7 +369,7 @@ section {
 }
 .top-section .intro {
   position: relative;
-  height: 50%;
+  height: fit-content;
   background: rgba(255, 255, 255, 0.9);
   border: 2px solid black;
   display: flex;
@@ -392,25 +377,14 @@ section {
   justify-content: flex-start;
   align-items: center;
 }
-@media (max-width: 960px) {
-  .top-section .intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 40%;
-    top: 140px;
-  }
-}
 @media (max-width: 875px) {
   .top-section .intro {
-    height: 60%;
-    top: 50px;
+    height: fit-content;
   }
 }
 @media (max-width: 570px) {
   .top-section .intro {
-    height: 65%;
+    height: fit-content;
   }
 }
 .top-section .intro #australia {
@@ -453,6 +427,9 @@ section {
   text-decoration: none;
   text-align: center;
   color: #389738;
+}
+.top-section .intro .features a:hover {
+  color: #8c8cff;
 }
 .top-section .intro .features div {
   display: flex;

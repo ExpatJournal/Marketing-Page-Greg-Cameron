@@ -1,7 +1,6 @@
 .wrapper {
   margin-right: auto; /* 1 */
   margin-left: auto; /* 1 */
-
   max-width: 960px; /* 2 */
   height: fit-content;
   padding-right: 10px; /* 3 */
@@ -14,7 +13,8 @@ section {
   width: 100%;
   display: block;
   @media @phone {
-    height: 400vh;
+    // height: 400vh;
+    height: fit-content;
   }
 }
 
@@ -35,12 +35,12 @@ section {
     //background-position-y: 150px;
     // background-position-x: -600px;
 
-    height: 170vh;
+    height: fit-content;
     // margin-top: 200px;
   }
 
   @media @sPhone {
-    height: 200vh;
+    height: fit-content;
     //background-position-x: -300px;
   }
   .sign-up {
@@ -59,17 +59,12 @@ section {
       font-weight: bolder;
       font-size: 4rem;
     }
-    @media @tablet {
-      width: 50%;
-      margin: 0 auto;
-      height: 20%;
-      top: 120px;
-    }
-    @media @phone {
-      width: 100%;
-      height: 30%;
-      top: 0px;
-    }
+
+    // @media @phone {
+    //   width: 100%;
+    //   height: 30%;
+    //   top: 0px;
+    // }
 
     .custom-flex(column, center, space-around);
     i {
@@ -86,22 +81,21 @@ section {
   /* !!!!!! INTRO SECTION !!!!!!!!! */
   .intro {
     position: relative;
-    height: 50%;
+    height: fit-content;
     background: rgba(255, 255, 255, 0.9);
     border: 2px solid black;
 
     .custom-flex(column, flex-start, center);
-    @media @tablet {
-      .custom-flex(column, flex-start, center);
-      height: 40%;
-      top: 140px;
-    }
+    // @media @tablet {
+    //   .custom-flex(column, flex-start, center);
+    //   height: 40%;
+    //   top: 140px;
+    // }
     @media @phone {
-      height: 60%;
-      top: 50px;
+      height: fit-content;
     }
     @media @sPhone {
-      height: 65%;
+      height: fit-content;
     }
     //intro picture
     #australia {
@@ -141,6 +135,9 @@ section {
         text-decoration: none;
         text-align: center;
         color: @main-color;
+      }
+      a:hover {
+        color: @purple-color;
       }
 
       div {
