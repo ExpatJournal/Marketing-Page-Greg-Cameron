@@ -2,7 +2,7 @@ section {
   height: 150vh;
   color: @main-color;
   width: 100%;
-
+  display: block;
   @media @phone {
     height: 400vh;
   }
@@ -14,7 +14,7 @@ section {
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
-  position: absolute;
+
   border: 2px solid greenyellow;
   @media @tablet {
     // top: 200px;
@@ -23,7 +23,7 @@ section {
     // background-position-x: -300px;
     background-size: cover;
     background-repeat: no-repeat;
-    top: 270px;
+    margin-top: 270px;
     background-position-y: 200px;
 
     height: 170vh;
@@ -78,6 +78,7 @@ section {
     height: 50%;
     background: rgba(255, 255, 255, 0.9);
     border: 2px solid black;
+
     .custom-flex(row, space-around, flex-start);
     @media @tablet {
       .custom-flex(column, flex-start, center);

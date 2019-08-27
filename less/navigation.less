@@ -1,15 +1,17 @@
 header {
   .custom-flex(row, space-between, center);
-  @media @phone {
-    .custom-flex(column, flex-start, space-between);
-    height: 280px;
-    background: white;
-  }
   position: fixed;
   width: 100%;
   z-index: 2;
   background: rgba(56, 151, 56, 0.7);
   height: 80px;
+  @media @phone {
+    .custom-flex(column, flex-start, space-between);
+    height: 280px;
+    top: 0px;
+    background: white;
+  }
+
   h1 {
     font-family: @lobster;
     margin-left: 20px;
@@ -24,25 +26,27 @@ header {
 
   .home-nav {
     font-size: 1.7rem;
-    margin-right: 30px;
-    .custom-flex(row, space-around, center);
+    width: 50%;
+    //background: blue;
+    text-align: right;
     @media @phone {
-      .custom-flex(column, center, space-between);
+      .custom-flex(column, center, center);
       width: 100%;
       //border: 2px solid yellow;
       margin-right: 0px;
       margin-top: 10px;
     }
-    width: 50%;
+
     a {
-      @media @phone {
-        margin: 5px;
-        .custom-btn(#7575ff, 50%, white);
-        text-align: center;
-      }
       text-decoration: none;
       font-family: @mukta;
       color: white;
+      margin: 0 20px;
+      @media @phone {
+        margin: 5px;
+        .custom-btn(@main-color, 50%, white);
+        text-align: center;
+      }
     }
   }
 }
