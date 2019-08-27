@@ -131,6 +131,7 @@ table {
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 html,
 body {
@@ -175,7 +176,6 @@ header {
   align-items: center;
   position: fixed;
   width: 100%;
-  top: 0%;
   z-index: 2;
   background: rgba(140, 140, 255, 0.7);
   height: 80px;
@@ -184,8 +184,10 @@ header {
   header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: space-between;
+    height: 280px;
+    background: white;
   }
 }
 header h1 {
@@ -196,42 +198,59 @@ header h1 {
 @media (max-width: 875px) {
   header h1 {
     font-size: 2.8rem;
-    margin-top: 20px;
-    border: 1px solid greenyellow;
+    margin-top: 10px;
+    color: #8c8cff;
   }
 }
 header .home-nav {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
+  margin-right: 30px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  width: 30%;
+  width: 50%;
 }
 @media (max-width: 875px) {
   header .home-nav {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    align-items: space-around;
+    align-items: space-between;
     width: 100%;
+    margin-right: 0px;
+    margin-top: 10px;
   }
 }
 header .home-nav a {
   text-decoration: none;
   font-family: "Mukta", sans-serif;
   color: white;
-  margin: 10px;
+}
+@media (max-width: 875px) {
+  header .home-nav a {
+    margin: 5px;
+    display: block;
+    background-color: #7575ff;
+    cursor: pointer;
+    width: 50%;
+    height: 45px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+  }
+  header .home-nav a:hover {
+    background-color: white;
+    color: #7575ff;
+  }
 }
 section {
-  height: 200vh;
+  height: 150vh;
   color: #8c8cff;
   width: 100%;
-}
-@media (max-width: 900px) {
-  section {
-    height: 250vh;
-  }
 }
 @media (max-width: 875px) {
   section {
@@ -239,56 +258,60 @@ section {
   }
 }
 .top-section {
+  position: relative;
   background-image: url(/img/architecture-beautiful-castle-2599692.jpg);
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
   position: absolute;
-  top: -80px;
   /* end of sign up */
+  /* !!!!!! INTRO SECTION !!!!!!!!! */
   /* end of product intro */
 }
 @media (max-width: 875px) {
   .top-section {
-    background-position-x: -300px;
+    background-size: cover;
     background-repeat: no-repeat;
+    top: 270px;
+    background-position-y: 200px;
+    height: 150vh;
+  }
+}
+@media (max-width: 570px) {
+  .top-section {
+    height: 200vh;
+    background-position-x: -300px;
   }
 }
 .top-section .sign-up {
   position: relative;
-  height: 25%;
+  height: 50vh;
   width: 25%;
   margin: 0 auto;
-  margin-top: 15%;
+  margin-top: 10%;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: space-around;
 }
+.top-section .sign-up h2 {
+  color: whitesmoke;
+  font-weight: bolder;
+  font-size: 4rem;
+}
 @media (max-width: 900px) {
   .top-section .sign-up {
     width: 50%;
-    margin-top: 20%;
+    margin: 0 auto;
     height: 20%;
   }
 }
 @media (max-width: 875px) {
   .top-section .sign-up {
-    margin-top: 30%;
     width: 100%;
-    height: 10%;
+    height: 30%;
   }
-}
-@media (max-width: 570px) {
-  .top-section .sign-up {
-    margin-top: 50%;
-  }
-}
-.top-section .sign-up h2 {
-  color: whitesmoke;
-  font-weight: bolder;
-  font-size: 4rem;
 }
 .top-section .sign-up i {
   font-size: 100px;
@@ -314,31 +337,37 @@ section {
 }
 .top-section .intro {
   position: relative;
-  margin: 5% auto;
+  height: 50%;
   background: rgba(255, 255, 255, 0.9);
   border: 2px solid black;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
 }
 @media (max-width: 900px) {
   .top-section .intro {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    height: 40%;
   }
 }
+@media (max-width: 875px) {
+  .top-section .intro {
+    height: 70%;
+  }
+}
+@media (max-width: 570px) {
+}
 .top-section .intro #australia {
-  margin-left: 20px;
   width: 30%;
+  margin: 20px;
 }
 @media (max-width: 900px) {
   .top-section .intro #australia {
-    margin: 20px;
-    width: 50%;
-    height: 30vh;
+    display: none;
   }
 }
 @media (max-width: 875px) {
@@ -357,17 +386,21 @@ section {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .top-section .intro .features h2 {
-  margin: 10px auto;
+  margin: 20px auto;
 }
 .top-section .intro .features div div h3 {
-  font-size: 2rem;
+  font-size: 2.3rem;
   margin: 10px;
 }
-.top-section .intro .features i {
+.top-section .intro .features a {
   font-size: 40px;
   margin: 10px;
+  text-decoration: none;
+  text-align: center;
+  color: #8c8cff;
 }
 .top-section .intro .features div {
   display: flex;
@@ -390,3 +423,4 @@ section {
   align-items: center;
   margin: 20px;
 }
+/* ======== END OF TOP SECTION ======== */

@@ -1,12 +1,12 @@
 header {
   .custom-flex(row, space-between, center);
   @media @phone {
-    .custom-flex(column, center, space-between);
-    // height: 200px;
+    .custom-flex(column, flex-start, space-between);
+    height: 280px;
+    background: white;
   }
   position: fixed;
   width: 100%;
-  top: 0%;
   z-index: 2;
   background: rgba(140, 140, 255, 0.7);
   height: 80px;
@@ -16,26 +16,33 @@ header {
     color: whitesmoke;
     @media @phone {
       font-size: 2.8rem;
-      margin-top: 20px;
-      border: 1px solid greenyellow;
+      margin-top: 10px;
+      color: @main-color;
+      // border: 1px solid greenyellow;
     }
   }
 
   .home-nav {
-    font-size: 1.4rem;
-    .custom-flex(row, space-between, center);
+    font-size: 1.7rem;
+    margin-right: 30px;
+    .custom-flex(row, space-around, center);
     @media @phone {
-      .custom-flex(row, center, space-around);
+      .custom-flex(column, center, space-between);
       width: 100%;
+      //border: 2px solid yellow;
+      margin-right: 0px;
+      margin-top: 10px;
     }
-
-    width: 30%;
+    width: 50%;
     a {
+      @media @phone {
+        margin: 5px;
+        .custom-btn(#7575ff, 50%, white);
+        text-align: center;
+      }
       text-decoration: none;
       font-family: @mukta;
-
       color: white;
-      margin: 10px;
     }
   }
 }
