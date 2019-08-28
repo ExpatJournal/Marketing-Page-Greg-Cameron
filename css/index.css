@@ -172,14 +172,12 @@ img {
 header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 2;
   background: rgba(56, 151, 56, 0.7);
-  height: 80px;
+  height: fit-content;
 }
 @media (max-width: 875px) {
   header {
@@ -187,15 +185,30 @@ header {
     flex-direction: column;
     justify-content: flex-start;
     align-items: space-between;
-    height: 280px;
     top: 0px;
     background: white;
+    text-align: center;
   }
 }
 header h1 {
   font-family: "Lobster", cursive;
   margin-left: 20px;
   color: whitesmoke;
+  font-size: 4rem;
+  align-self: center;
+}
+header h1 a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+@media (max-width: 875px) {
+  header h1 a {
+    color: #389738;
+  }
+}
+header h1 a:hover {
+  text-decoration: none;
+  color: #8c8cff;
 }
 @media (max-width: 875px) {
   header h1 {
@@ -208,14 +221,29 @@ header .home-nav {
   font-size: 1.7rem;
   display: inline-block;
   text-align: right;
+  background: rgba(56, 151, 56, 0);
+}
+header .home-nav div ul li a {
+  text-align: center;
+  margin: 10px auto;
+}
+header .home-nav .navbar-toggler-icon {
+  font-size: 30px;
+  color: whitesmoke;
+  margin-top: 15px;
+}
+@media (max-width: 875px) {
+  header .home-nav .navbar-toggler-icon {
+    color: #389738;
+  }
+}
+header .home-nav .navbar-toggler-icon:hover {
+  color: #8c8cff;
 }
 @media (max-width: 875px) {
   header .home-nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 100%;
+    text-align: center;
     margin-right: 0px;
     margin-top: 10px;
   }
@@ -223,6 +251,7 @@ header .home-nav {
 header .home-nav a {
   text-decoration: none;
   font-family: "Mukta", sans-serif;
+  font-size: 2.5rem;
   color: white;
   margin: 0 20px;
 }
@@ -242,9 +271,14 @@ header .home-nav a {
     text-align: center;
   }
   header .home-nav a:hover {
-    background-color: white;
-    color: #389738;
+    background-color: rgba(140, 140, 255, 0.5);
+    color: whitesmoke;
+    border: 1px solid #389738;
+    position: relative;
   }
+}
+header .home-nav a:hover {
+  color: grey;
 }
 footer {
   background: rgba(56, 151, 56, 0.8);
@@ -266,11 +300,11 @@ footer nav {
   align-content: center;
   text-decoration: none;
   font-size: 1.3rem;
-  width: 50%;
 }
 footer nav a {
   color: whitesmoke;
   text-decoration: none;
+  font-size: 2rem;
   margin: 0 20px;
 }
 @media (max-width: 570px) {
@@ -344,14 +378,10 @@ section {
   font-size: 100px;
   color: red;
 }
-.top-section .sign-up i {
-  font-size: 100px;
-  color: red;
-}
 .top-section .sign-up h2 {
   color: whitesmoke;
   font-weight: bolder;
-  font-size: 4rem;
+  font-size: 6rem;
 }
 .top-section .sign-up .sign-up-btn {
   display: block;
@@ -365,11 +395,15 @@ section {
   padding: 10px;
   font-size: 20px;
   margin: 30px auto;
+  font-size: 3rem;
   font-weight: bolder;
+  height: fit-content;
 }
 .top-section .sign-up .sign-up-btn:hover {
-  background-color: white;
-  color: #389738;
+  background-color: rgba(140, 140, 255, 0.5);
+  color: whitesmoke;
+  border: 1px solid #389738;
+  position: relative;
 }
 .top-section .intro {
   position: relative;
@@ -380,6 +414,10 @@ section {
   flex-direction: column-reverse;
   justify-content: flex-start;
   align-items: center;
+}
+.top-section .intro h2 {
+  font-size: 4rem;
+  font-weight: bold;
 }
 @media (max-width: 875px) {
   .top-section .intro {
@@ -422,11 +460,11 @@ section {
   margin-top: 5vh;
 }
 .top-section .intro .features div div h3 {
-  font-size: 2.3rem;
+  font-size: 3rem;
   margin: 10px;
 }
 .top-section .intro .features a {
-  font-size: 40px;
+  font-size: 5rem;
   margin: 10px;
   text-decoration: none;
   text-align: center;
@@ -434,6 +472,12 @@ section {
 }
 .top-section .intro .features a:hover {
   color: #8c8cff;
+}
+.top-section .intro .features p {
+  text-align: start;
+  padding: 5px;
+  line-height: 2.5rem;
+  font-size: 2rem;
 }
 .top-section .intro .features div {
   display: flex;

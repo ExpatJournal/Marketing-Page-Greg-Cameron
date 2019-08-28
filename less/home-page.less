@@ -50,15 +50,12 @@ section {
     margin: 0 auto;
     text-align: center;
     .custom-flex(column, center, space-around);
+
     i {
       font-size: 100px;
       color: red;
     }
-    .custom-flex(column, center, space-around);
-    i {
-      font-size: 100px;
-      color: red;
-    }
+
     background-image: url(/img/architecture-beautiful-castle-2599692.jpg);
     background-attachment: fixed;
     background-size: cover;
@@ -67,13 +64,15 @@ section {
     h2 {
       color: whitesmoke;
       font-weight: bolder;
-      font-size: 4rem;
+      font-size: 6rem;
     }
 
     .sign-up-btn {
       .custom-btn(@main-color, 200px, white);
       margin: 30px auto;
+      font-size: 3rem;
       font-weight: bolder;
+      height: fit-content;
     }
   } /* end of sign up */
 
@@ -83,8 +82,12 @@ section {
     height: fit-content;
     background: rgba(255, 255, 255, 0.9);
     border: 2px solid black;
-
     .custom-flex(column-reverse, flex-start, center);
+    h2 {
+      font-size: 4rem;
+      font-weight: bold;
+    }
+
     // @media @tablet {
     //   .custom-flex(column, flex-start, center);
     //   height: 40%;
@@ -124,12 +127,12 @@ section {
       margin-top: 5vh;
 
       div div h3 {
-        font-size: 2.3rem;
+        font-size: 3rem;
         margin: 10px;
       }
 
       a {
-        font-size: 40px;
+        font-size: 5rem;
         margin: 10px;
         text-decoration: none;
         text-align: center;
@@ -137,6 +140,13 @@ section {
       }
       a:hover {
         color: @purple-color;
+      }
+
+      p {
+        text-align: start;
+        padding: 5px;
+        line-height: 2.5rem;
+        font-size: 2rem;
       }
 
       div {
