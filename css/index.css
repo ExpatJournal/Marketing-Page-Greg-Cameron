@@ -284,7 +284,7 @@ footer {
   background: rgba(56, 151, 56, 0.8);
   display: fixed;
   text-align: center;
-  height: 100px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -292,23 +292,36 @@ footer {
 }
 footer h1 {
   font-family: "Lobster", cursive;
+  display: inline-block;
   font-size: 2.5rem;
   margin: 20px auto;
   color: whitesmoke;
+}
+footer div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
 }
 footer nav {
   align-content: center;
   text-decoration: none;
   font-size: 1.3rem;
+  margin: 0px auto;
+  display: inline-block;
 }
-footer nav a {
+footer p {
+  display: inline-block;
+  color: grey;
+}
+footer a {
   color: whitesmoke;
   text-decoration: none;
   font-size: 2rem;
   margin: 0 20px;
 }
 @media (max-width: 570px) {
-  footer nav {
+  footer {
     width: 100%;
   }
 }
@@ -408,7 +421,6 @@ section {
   position: relative;
   height: fit-content;
   background: rgba(255, 255, 255, 0.9);
-  border: 2px solid black;
   display: flex;
   flex-direction: column-reverse;
   justify-content: flex-start;
@@ -431,8 +443,9 @@ section {
 .top-section .intro #australia {
   margin: 20px;
   position: relative;
-  margin-top: 5vh;
+  margin-bottom: 5vh;
   align-self: center;
+  border-radius: 5%;
 }
 @media (max-width: 960px) {
   .top-section .intro #australia {

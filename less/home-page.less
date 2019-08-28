@@ -47,6 +47,7 @@ section {
     position: relative;
     height: 600px;
     width: 100%;
+
     margin: 0 auto;
     text-align: center;
     .custom-flex(column, center, space-around);
@@ -81,7 +82,7 @@ section {
     position: relative;
     height: fit-content;
     background: rgba(255, 255, 255, 0.9);
-    border: 2px solid black;
+    //border: 1px solid black;
     .custom-flex(column-reverse, flex-start, center);
     h2 {
       font-size: 4rem;
@@ -104,8 +105,9 @@ section {
       // width: 30%;
       margin: 20px;
       position: relative;
-      margin-top: 5vh;
+      margin-bottom: 5vh;
       align-self: center;
+      border-radius: 5%;
       @media @tablet {
         //display: none;
         align-self: center;
