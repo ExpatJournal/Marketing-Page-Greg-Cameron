@@ -330,24 +330,28 @@ section {
   width: 100%;
   margin: 0 auto;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-around;
   background-image: url(/img/architecture-beautiful-castle-2599692.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: space-around;
+}
+.top-section .sign-up i {
+  font-size: 100px;
+  color: red;
+}
+.top-section .sign-up i {
+  font-size: 100px;
+  color: red;
 }
 .top-section .sign-up h2 {
   color: whitesmoke;
   font-weight: bolder;
   font-size: 4rem;
-}
-.top-section .sign-up i {
-  font-size: 100px;
-  color: red;
 }
 .top-section .sign-up .sign-up-btn {
   display: block;
@@ -373,7 +377,7 @@ section {
   background: rgba(255, 255, 255, 0.9);
   border: 2px solid black;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: flex-start;
   align-items: center;
 }

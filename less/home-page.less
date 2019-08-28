@@ -49,6 +49,16 @@ section {
     width: 100%;
     margin: 0 auto;
     text-align: center;
+    .custom-flex(column, center, space-around);
+    i {
+      font-size: 100px;
+      color: red;
+    }
+    .custom-flex(column, center, space-around);
+    i {
+      font-size: 100px;
+      color: red;
+    }
     background-image: url(/img/architecture-beautiful-castle-2599692.jpg);
     background-attachment: fixed;
     background-size: cover;
@@ -60,17 +70,6 @@ section {
       font-size: 4rem;
     }
 
-    // @media @phone {
-    //   width: 100%;
-    //   height: 30%;
-    //   top: 0px;
-    // }
-
-    .custom-flex(column, center, space-around);
-    i {
-      font-size: 100px;
-      color: red;
-    }
     .sign-up-btn {
       .custom-btn(@main-color, 200px, white);
       margin: 30px auto;
@@ -85,7 +84,7 @@ section {
     background: rgba(255, 255, 255, 0.9);
     border: 2px solid black;
 
-    .custom-flex(column, flex-start, center);
+    .custom-flex(column-reverse, flex-start, center);
     // @media @tablet {
     //   .custom-flex(column, flex-start, center);
     //   height: 40%;
