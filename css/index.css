@@ -407,6 +407,12 @@ section {
   font-size: 100px;
   color: red;
 }
+@media (max-width: 570px) {
+  .top-section .sign-up {
+    background-image: url(/img/architecture-beautiful-928x597.jpg);
+    background-position: center;
+  }
+}
 .top-section .sign-up h2 {
   color: whitesmoke;
   font-weight: bolder;
