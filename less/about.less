@@ -1,0 +1,33 @@
+.about-section {
+  height: fit-content;
+}
+
+.container {
+  //border: 1px solid yellow;
+  height: fit-content;
+  max-width: 100%;
+  img {
+    height: 150px;
+    border-radius: 50%;
+  }
+  .custom-flex(row, space-evenly, center);
+  @media @sPhone {
+    .custom-flex(column, center, center);
+  }
+}
+.person {
+  //border: 2px solid red;
+  padding: 20px;
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+  img {
+    margin: 10px;
+  }
+  h2 {
+    font-size: 2.8rem;
+  }
+  @media @sPhone {
+    width: 100%;
+  }
+}

@@ -1,58 +1,153 @@
-section {
-  height: 200vh;
+.wrapper {
+  margin-right: auto; /* 1 */
+  margin-left: auto; /* 1 */
+  max-width: 960px; /* 2 */
+  height: fit-content;
+  padding-right: 10px; /* 3 */
+  padding-left: 10px; /* 3 */
+}
 
+section {
+  height: fit-content;
   color: @main-color;
+  width: 100%;
+  display: block;
+  @media @phone {
+    // height: 400vh;
+    height: fit-content;
+  }
 }
 
 .top-section {
-  background-image: url(/img/architecture-beautiful-castle-2599692.jpg);
-  background-size: cover;
-  background-attachment: fixed;
+  position: relative;
+
   width: 100%;
-  position: absolute;
-  top: -80px;
+
+  @media @phone {
+    height: fit-content;
+    // margin-top: 200px;
+  }
+
+  @media @sPhone {
+    height: fit-content;
+    //background-position-x: -300px;
+  }
   .sign-up {
-    // border: 2px solid greenyellow;
-    height: 25%;
-    width: 25%;
+    position: relative;
+    height: 600px;
+    width: 100%;
     margin: 0 auto;
-    margin-top: 20%;
     text-align: center;
-    h2 {
-      color: whitesmoke;
-    }
     .custom-flex(column, center, space-around);
+
     i {
       font-size: 100px;
-      color: @main-color;
+      color: red;
     }
+    @media @sPhone {
+      background-image: url(/img/architecture-beautiful-928x597.jpg);
+      background-size: cover;
+    }
+    background-image: url(/img/architecture-beautiful-castle-2599692.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    h2 {
+      color: whitesmoke;
+      font-weight: bolder;
+      font-size: 6rem;
+    }
+
     .sign-up-btn {
       .custom-btn(@main-color, 200px, white);
       margin: 30px auto;
+      font-size: 3rem;
+      font-weight: bolder;
+      height: fit-content;
     }
   } /* end of sign up */
+
+  /* !!!!!! INTRO SECTION !!!!!!!!! */
   .intro {
-    // height: 40%;
     position: relative;
-
+    height: fit-content;
     background: rgba(255, 255, 255, 0.9);
-    border: 2px solid black;
-    padding: 20px;
-    .custom-flex(row, space-around, center);
+    //border: 1px solid black;
+    .custom-flex(column-reverse, flex-start, center);
+    h2 {
+      font-size: 4rem;
+      font-weight: bold;
+    }
 
+    // @media @tablet {
+    //   .custom-flex(column, flex-start, center);
+    //   height: 40%;
+    //   top: 140px;
+    // }
+    @media @phone {
+      height: fit-content;
+    }
+    @media @sPhone {
+      height: fit-content;
+    }
+    //intro picture
+    #australia {
+      // width: 30%;
+      margin: 20px;
+      position: relative;
+      margin-bottom: 5vh;
+      align-self: center;
+      border-radius: 5%;
+      @media @tablet {
+        //display: none;
+        align-self: center;
+      }
+
+      @media @phone {
+        display: none;
+      }
+      @media @sPhone {
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
     .features {
       .custom-flex(column, space-between, center);
-      h3 {
-        font-size: 2rem;
+      position: relative;
+      //align-self: center;
+      text-align: center;
+      margin-top: 5vh;
+
+      div div h3 {
+        font-size: 3rem;
         margin: 10px;
       }
 
-      i {
-        font-size: 40px;
+      a {
+        font-size: 5rem;
+        margin: 10px;
+        text-decoration: none;
+        text-align: center;
+        color: @main-color;
+      }
+      a:hover {
+        color: @purple-color;
+      }
+
+      p {
+        text-align: start;
+        padding: 5px;
+        line-height: 2.5rem;
+        font-size: 2rem;
       }
 
       div {
         .custom-flex(row, center, center);
+        @media @phone {
+          .custom-flex(column, center, center);
+        }
 
         div {
           .custom-flex(column, space-around, center);
@@ -61,4 +156,4 @@ section {
       }
     }
   } /* end of product intro */
-}
+} /* ======== END OF TOP SECTION ======== */

@@ -1,30 +1,97 @@
 header {
-  .custom-flex(row, space-between, center);
-  position: fixed;
+  // display: block;
+  display: flex;
+  flex-direction: row;
+
+  position: sticky;
+  top: 0;
   width: 100%;
-  top: 0%;
   z-index: 2;
-  background: rgba(140, 140, 255, 0.7);
-  height: 80px;
+  background: rgba(56, 151, 56, 0.7);
+  height: fit-content;
+  @media @phone {
+    .custom-flex(column, flex-start, space-between);
+    // height: 280px;
+    top: 0px;
+    background: white;
+    text-align: center;
+  }
+
   h1 {
     font-family: @lobster;
     margin-left: 20px;
+    a {
+      text-decoration: none;
+      color: whitesmoke;
+      @media @phone {
+        color: @main-color;
+      }
+    }
+    a:hover {
+      text-decoration: none;
+      color: @purple-color;
+    }
     color: whitesmoke;
+
+    font-size: 4rem;
+    align-self: center;
+    @media @phone {
+      font-size: 2.8rem;
+      margin-top: 10px;
+      color: @main-color;
+    }
   }
-}
 
-.home-nav {
-  font-size: 1.2rem;
+  .home-nav {
+    font-size: 1.7rem;
+    // width: 50%;
+    display: inline-block;
+    // border: 2px solid purple;
+    text-align: right;
+    background: rgba(56, 151, 56, 0);
+    div {
+      ul li a {
+        text-align: center;
 
-  .custom-flex(row, center, center);
-  margin: 10px;
-  // background: blue;
-  width: 20%;
-  a {
-    text-decoration: none;
-    font-family: @mukta;
+        margin: 10px auto;
+      }
+    }
+    .navbar-toggler-icon {
+      font-size: 30px;
+      color: whitesmoke;
+      margin-top: 15px;
+      @media @phone {
+        color: @main-color;
+      }
+    }
 
-    color: white;
-    margin: 10px;
+    .navbar-toggler-icon:hover {
+      color: @purple-color;
+    }
+
+    @media @phone {
+      //.custom-flex(column, center, center);
+      width: 100%;
+      //border: 2px solid yellow;
+      text-align: center;
+      margin-right: 0px;
+      margin-top: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      font-family: @mukta;
+      font-size: 2.5rem;
+      color: white;
+      margin: 0 20px;
+      @media @phone {
+        margin: 5px;
+        .custom-btn(@main-color, 50%, white);
+        text-align: center;
+      }
+    }
+    a:hover {
+      color: grey;
+    }
   }
 }

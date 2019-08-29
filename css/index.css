@@ -131,6 +131,7 @@ table {
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 html,
 body {
@@ -171,106 +172,342 @@ img {
 header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100%;
-  top: 0%;
   z-index: 2;
-  background: rgba(140, 140, 255, 0.7);
-  height: 80px;
+  background: rgba(56, 151, 56, 0.7);
+  height: fit-content;
+}
+@media (max-width: 875px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: space-between;
+    top: 0px;
+    background: white;
+    text-align: center;
+  }
 }
 header h1 {
   font-family: "Lobster", cursive;
   margin-left: 20px;
   color: whitesmoke;
+  font-size: 4rem;
+  align-self: center;
 }
-.home-nav {
-  font-size: 1.2rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-  width: 20%;
-}
-.home-nav a {
+header h1 a {
   text-decoration: none;
-  font-family: "Mukta", sans-serif;
-  color: white;
-  margin: 10px;
+  color: whitesmoke;
 }
-section {
-  height: 200vh;
+@media (max-width: 875px) {
+  header h1 a {
+    color: #389738;
+  }
+}
+header h1 a:hover {
+  text-decoration: none;
   color: #8c8cff;
 }
-.top-section {
-  background-image: url(/img/architecture-beautiful-castle-2599692.jpg);
-  background-size: cover;
-  background-attachment: fixed;
+@media (max-width: 875px) {
+  header h1 {
+    font-size: 2.8rem;
+    margin-top: 10px;
+    color: #389738;
+  }
+}
+header .home-nav {
+  font-size: 1.7rem;
+  display: inline-block;
+  text-align: right;
+  background: rgba(56, 151, 56, 0);
+}
+header .home-nav div ul li a {
+  text-align: center;
+  margin: 10px auto;
+}
+header .home-nav .navbar-toggler-icon {
+  font-size: 30px;
+  color: whitesmoke;
+  margin-top: 15px;
+}
+@media (max-width: 875px) {
+  header .home-nav .navbar-toggler-icon {
+    color: #389738;
+  }
+}
+header .home-nav .navbar-toggler-icon:hover {
+  color: #8c8cff;
+}
+@media (max-width: 875px) {
+  header .home-nav {
+    width: 100%;
+    text-align: center;
+    margin-right: 0px;
+    margin-top: 10px;
+  }
+}
+header .home-nav a {
+  text-decoration: none;
+  font-family: "Mukta", sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  margin: 0 20px;
+}
+@media (max-width: 875px) {
+  header .home-nav a {
+    margin: 5px;
+    display: block;
+    background-color: #389738;
+    cursor: pointer;
+    width: 50%;
+    height: fit-content;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+  }
+  header .home-nav a:hover {
+    background-color: rgba(140, 140, 255, 0.5);
+    color: whitesmoke;
+    border: 1px solid #389738;
+    position: relative;
+  }
+}
+header .home-nav a:hover {
+  color: grey;
+}
+footer {
+  background: rgba(56, 151, 56, 0.8);
+  display: fixed;
+  text-align: center;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer h1 {
+  font-family: "Lobster", cursive;
+  display: inline-block;
+  font-size: 2.5rem;
+  margin: 20px auto;
+  color: whitesmoke;
+}
+footer div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   width: 100%;
-  position: absolute;
-  top: -80px;
+}
+@media (max-width: 875px) {
+  footer div {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer div nav {
+    width: 100%;
+  }
+  footer div nav a {
+    font-size: 1rem;
+    margin: 5px;
+  }
+  footer div p {
+    font-size: 1rem;
+  }
+}
+footer nav {
+  align-content: center;
+  text-decoration: none;
+  font-size: 1.3rem;
+  margin: 0px auto;
+  display: inline-block;
+}
+footer p {
+  display: inline-block;
+  color: grey;
+}
+footer a {
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 0 20px;
+}
+@media (max-width: 570px) {
+  footer {
+    width: 100%;
+  }
+}
+.wrapper {
+  margin-right: auto;
+  /* 1 */
+  margin-left: auto;
+  /* 1 */
+  max-width: 960px;
+  /* 2 */
+  height: fit-content;
+  padding-right: 10px;
+  /* 3 */
+  padding-left: 10px;
+  /* 3 */
+}
+section {
+  height: fit-content;
+  color: #389738;
+  width: 100%;
+  display: block;
+}
+@media (max-width: 875px) {
+  section {
+    height: fit-content;
+  }
+}
+.top-section {
+  position: relative;
+  width: 100%;
   /* end of sign up */
+  /* !!!!!! INTRO SECTION !!!!!!!!! */
   /* end of product intro */
 }
+@media (max-width: 875px) {
+  .top-section {
+    height: fit-content;
+  }
+}
+@media (max-width: 570px) {
+  .top-section {
+    height: fit-content;
+  }
+}
 .top-section .sign-up {
-  height: 25%;
-  width: 25%;
+  position: relative;
+  height: 600px;
+  width: 100%;
   margin: 0 auto;
-  margin-top: 20%;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: space-around;
-}
-.top-section .sign-up h2 {
-  color: whitesmoke;
+  background-image: url(/img/architecture-beautiful-castle-2599692.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .top-section .sign-up i {
   font-size: 100px;
-  color: #8c8cff;
+  color: red;
+}
+@media (max-width: 570px) {
+  .top-section .sign-up {
+    background-image: url(/img/architecture-beautiful-928x597.jpg);
+    background-size: cover;
+  }
+}
+.top-section .sign-up h2 {
+  color: whitesmoke;
+  font-weight: bolder;
+  font-size: 6rem;
 }
 .top-section .sign-up .sign-up-btn {
   display: block;
-  background-color: #8c8cff;
+  background-color: #389738;
   cursor: pointer;
   width: 200px;
-  height: 45px;
   border-radius: 10px;
   color: white;
   text-decoration: none;
   padding: 10px;
   font-size: 20px;
   margin: 30px auto;
+  font-size: 3rem;
+  font-weight: bolder;
+  height: fit-content;
 }
 .top-section .sign-up .sign-up-btn:hover {
-  background-color: white;
-  color: #8c8cff;
+  background-color: rgba(140, 140, 255, 0.5);
+  color: whitesmoke;
+  border: 1px solid #389738;
+  position: relative;
 }
 .top-section .intro {
   position: relative;
+  height: fit-content;
   background: rgba(255, 255, 255, 0.9);
-  border: 2px solid black;
-  padding: 20px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
   align-items: center;
+}
+.top-section .intro h2 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+@media (max-width: 875px) {
+  .top-section .intro {
+    height: fit-content;
+  }
+}
+@media (max-width: 570px) {
+  .top-section .intro {
+    height: fit-content;
+  }
+}
+.top-section .intro #australia {
+  margin: 20px;
+  position: relative;
+  margin-bottom: 5vh;
+  align-self: center;
+  border-radius: 5%;
+}
+@media (max-width: 960px) {
+  .top-section .intro #australia {
+    align-self: center;
+  }
+}
+@media (max-width: 875px) {
+  .top-section .intro #australia {
+    display: none;
+  }
+}
+@media (max-width: 570px) {
+  .top-section .intro #australia {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 .top-section .intro .features {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  text-align: center;
+  margin-top: 5vh;
 }
-.top-section .intro .features h3 {
-  font-size: 2rem;
+.top-section .intro .features div div h3 {
+  font-size: 3rem;
   margin: 10px;
 }
-.top-section .intro .features i {
-  font-size: 40px;
+.top-section .intro .features a {
+  font-size: 5rem;
+  margin: 10px;
+  text-decoration: none;
+  text-align: center;
+  color: #389738;
+}
+.top-section .intro .features a:hover {
+  color: #8c8cff;
+}
+.top-section .intro .features p {
+  text-align: start;
+  padding: 5px;
+  line-height: 2.5rem;
+  font-size: 2rem;
 }
 .top-section .intro .features div {
   display: flex;
@@ -278,10 +515,59 @@ section {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 875px) {
+  .top-section .intro .features div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .top-section .intro .features div div {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   margin: 20px;
+}
+/* ======== END OF TOP SECTION ======== */
+.about-section {
+  height: fit-content;
+}
+.container {
+  height: fit-content;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container img {
+  height: 150px;
+  border-radius: 50%;
+}
+@media (max-width: 570px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.person {
+  padding: 20px;
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+}
+.person img {
+  margin: 10px;
+}
+.person h2 {
+  font-size: 2.8rem;
+}
+@media (max-width: 570px) {
+  .person {
+    width: 100%;
+  }
 }
