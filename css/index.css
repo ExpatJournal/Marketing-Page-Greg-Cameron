@@ -410,6 +410,7 @@ section {
 @media (max-width: 570px) {
   .top-section .sign-up {
     background-image: url(/img/architecture-beautiful-closer-camera.jpg);
+    background-size: contain;
   }
 }
 .top-section .sign-up h2 {
