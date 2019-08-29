@@ -409,8 +409,7 @@ section {
 }
 @media (max-width: 570px) {
   .top-section .sign-up {
-    background-image: url(/img/architecture-beautiful-castle-camera.jpg);
-    background-position: bottom;
+    background-image: url(/img/architecture-beautiful-close-camera.jpg);
   }
 }
 .top-section .sign-up h2 {
